@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Create a webpage that has a form for file upload-->
+    <!--The form should make a POST request to the /upload endpoind-->
+    <!--The form should have a file input field-->
+    <!--The form should have a submit button-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload</title>
+    </head>
+    <body>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+</html>
+
+
