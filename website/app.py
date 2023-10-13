@@ -1,4 +1,9 @@
+'''
+This is the main file containing the backend code that serves our website
+'''
+
 import sys
+
 # sys.path.append('/Users/krishnarao/opt/anaconda3/envs/ScholarNet/bin/')
 from flask import Flask, render_template, request
 from src.resumeParser import hello, parseResume
