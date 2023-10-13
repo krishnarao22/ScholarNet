@@ -7,6 +7,9 @@ import sys
 # sys.path.append('/Users/krishnarao/opt/anaconda3/envs/ScholarNet/bin/')
 from flask import Flask, render_template, request
 from src.resumeParser import hello, parseResume
+from src.opportunityCreator import createOpportunity
+from src.login import login
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -26,6 +29,22 @@ def upload_post():
     file = request.files['file']
     # process the file
     return parseResume(file)
+
+@app.route('/opportunity_create', methods=['GET'])
+def opportunity_create_get():
+    return render_template('opportunity_create.html')
+
+@app.route('/opportunity_create', methods=['POST'])
+def opportunity_create_post():
+    return createOpportunity()
+
+@app.route('/login', methods=['GET'])
+def login_get():
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST'])
+def login_post():
+    return login()
 
 if __name__ == '__main__':
     app.run(debug=True)
