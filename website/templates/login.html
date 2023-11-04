@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-    </head>
-    <body>
-        <form action="/login" method="post">
-            <input type="text" name="username">
-            <input type="password" name="password">
-            <input type="submit" value="Login">
-        </form>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarnet Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .login-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .login-button {
+            background-color: #0072C6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .login-button:hover {
+            background-color: #0055A4;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">Scholarnet Login</h1>
+        <p>Sign in to access Scholarnet.</p>
+        <button class="login-button" onclick="loginWithMicrosoft()">Login with Microsoft</button>
+    </div>
+    <script>
+        // Redirect to the Microsoft login page when the button is clicked
+        function loginWithMicrosoft() {
+            // Replace 'YOUR_MICROSOFT_AUTH_URL' with the actual Microsoft authorization URL
+            window.location.href = '/microsoft_login';
+        }
+    </script>
+</body>
 </html>
